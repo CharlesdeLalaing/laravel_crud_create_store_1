@@ -8,6 +8,18 @@
             <p>
                 Installer Bootstrap, le blabla dans mes notes.
             </p>
+            <div class="container bg-primary border-dark">
+                <p>
+                    <li>composer require laravel/ui</li>
+                    <li>php artisan ui bootstrap</li>
+                    <li>changer version Bootstrap dans package.json en 5.0.2</li>
+                    <li>npm install @popperjs/core</li>
+                    <li>npm install</li>
+                    <li>npm run dev</li>
+                    <li>npm run dev</li>
+                    rejouter link dans head et body pour css et js
+                </p>
+            </div>
             <p>
                 créer la view pokemon.blade.php, faire dossier layouts et partials et pages (mettre pokemon.blade.php
                 dans pages). Faire la blade de base et connecté à navbar/section/footer, l'extend dans les pages.
@@ -15,6 +27,36 @@
             <p>
                 Controllers et route pour entre les pages
             </p>
+            <div class="container bg-success border-dark">
+                <p>
+                    1. debut controller:
+                    php artisan make:controller HomeController <- nom du controller avec premiere lettre en majuscule
+                        </p>
+                        <p>3. dans le controller, créer des functions de type:
+                        </p>
+                        <p>
+                            class HomeController extends Controller <br>
+                            { <br>
+                            public function index() { <br>
+                            $nom = 'Cactus'; <br>
+                            $age = 24; <br>
+                            return view('test', compact('nom', 'age')); <br>
+                            }
+                            <br>
+                            public function andy() { <br>
+                            $nom = 'Andy'; <br>
+                            return view('andy', compact('nom')); <br>
+                            }<br>
+                            }
+                        </p>
+                        <p>
+                            4. dans les routes: <br>
+
+                            vas dans le homeController, prend la classe et ensuite lis la function index <br>
+                            Route::get('/test', [HomeController::class, 'index'])->name('index'); <br>
+                            Route::get('/andy', [HomeController::class, 'andy'])->name('andy');
+                        </p>
+            </div>
             <h1>
                 Début du CRUD
             </h1>
@@ -64,7 +106,8 @@
                                     <p>redirect()->back(); <---- methode pour rediriger vers la page precedente </p>
 
 
-                                            <span><i>auteur1 -> le nom a envoyer dans la base de donée</i><br><i>auteur2 ->
+                                            <span><i>auteur1 -> le nom a envoyer dans la base de donée</i><br><i>auteur2
+                                                    ->
                                                     le
                                                     nom
                                                     utilisé dans la form (name="")</i></span>
@@ -92,3 +135,7 @@
                                                     <h1>Nouvelle fonction a comprendre : CREATE</h1>
         </div>
     </section>
+
+
+    <p>je vais continuer des notes ici pour continuer a ecrire et practicer mon ecriture</p>
+    <p></p>
